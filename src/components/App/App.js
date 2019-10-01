@@ -25,6 +25,7 @@ class App extends Component {
         </header>
         
         <img src={this.props.reduxState.random.image_original_url} />
+        <button onClick={this.getGiphys}>Refresh</button>
       </div>
     );
   }
