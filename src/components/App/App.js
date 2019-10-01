@@ -9,6 +9,7 @@ class App extends Component {
     this.getGiphys();
   }
   getGiphys = () => {
+    this.props.dispatch({ type: 'SET_RANDOM', payload:'' })
     Axios.get('/random')
     .then (response => {
       console.log(response)
@@ -22,10 +23,10 @@ class App extends Component {
       <div>
         <header className="App-header">
           <h1>Random Giphy API</h1>
+          <button onClick={this.getGiphys}>Refresh</button>
         </header>
         
         <img src={this.props.reduxState.random.image_original_url} />
-        <button onClick={this.getGiphys}>Refresh</button>
       </div>
     );
   }

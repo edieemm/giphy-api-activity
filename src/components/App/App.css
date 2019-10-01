@@ -17,6 +17,19 @@
   font-size: large;
 }
 
+img {
+  display: block;
+  height: 300px;
+  margin: 20px auto;
+}
+
+button{
+  font-size: 18px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
